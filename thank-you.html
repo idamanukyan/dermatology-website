@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your appointment request - Dr. Lusine Barseghyan, Dermatologist in Yerevan">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Request Submitted | Dr. Lusine Barseghyan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .thank-you-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .thank-you-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-16) var(--space-4);
+            background: var(--color-gray-50);
+        }
+        .thank-you-card {
+            background: white;
+            padding: var(--space-12);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        .thank-you-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--space-6);
+            background: #E8F5E9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .thank-you-icon svg {
+            width: 40px;
+            height: 40px;
+            color: #4CAF50;
+        }
+        .thank-you-card h1 {
+            font-size: var(--font-size-2xl);
+            color: var(--color-gray-900);
+            margin-bottom: var(--space-4);
+        }
+        .thank-you-card p {
+            color: var(--color-gray-600);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--space-6);
+        }
+        .thank-you-details {
+            background: var(--color-gray-50);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-6);
+        }
+        .thank-you-details p {
+            margin: 0;
+            font-size: var(--font-size-sm);
+        }
+        .thank-you-actions {
+            display: flex;
+            gap: var(--space-3);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body class="thank-you-page">
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Dr. Lusine Barseghyan</span>
+                <span class="logo-subtitle">Dermatologist</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hy">ՀԱՅ</button>
+                <button class="lang-btn" data-lang="ru">РУС</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="thank-you-content">
+        <div class="thank-you-card">
+            <div class="thank-you-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"/>
+                </svg>
+            </div>
+            <h1 data-i18n="thankYouTitle">Request Submitted</h1>
+            <p data-i18n="thankYouMessage">Thank you for your appointment request. Our staff will contact you within 1-2 business days to confirm your appointment.</p>
+
+            <div class="thank-you-details">
+                <p data-i18n="thankYouPhone"><strong>Questions?</strong> Call us at <a href="tel:+37410510451">+374 10 510451</a></p>
+            </div>
+
+            <div class="thank-you-actions">
+                <a href="index.html" class="btn btn-primary">Return Home</a>
+                <a href="index.html#services" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Dr. Lusine Barseghyan</span>
+                    <p class="footer-tagline">Dermatologist in Yerevan, Armenia</p>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p class="copyright">&copy; 2026 Dr. Lusine Barseghyan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

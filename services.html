@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dermatology and cosmetology services by Dr. Lusine Barseghyan in Yerevan, Armenia. Medical dermatology, Botox, fillers, HydraFacial, chemical peels, and more.">
+    <meta name="keywords" content="dermatologist Yerevan, cosmetologist Armenia, Botox Yerevan, fillers Armenia, HydraFacial, chemical peel, skin treatments">
+    <title>Services | Dr. Lusine Barseghyan - Dermatologist & Cosmetologist in Yerevan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Minimalist Services Page */
+        .services-page {
+            --section-padding: 120px;
+        }
+
+        /* Hero */
+        .services-hero {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: var(--color-white);
+        }
+        .services-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--color-gray-900);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .services-hero p {
+            font-size: 1.25rem;
+            color: var(--color-gray-500);
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Category Section */
+        .service-section {
+            padding: var(--section-padding) 0;
+            border-top: 1px solid var(--color-gray-100);
+        }
+        .service-section:nth-child(even) {
+            background: var(--color-gray-50);
+        }
+
+        /* Section Header */
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        .section-title-large {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--color-gray-900);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        .section-desc {
+            font-size: 1.125rem;
+            color: var(--color-gray-500);
+            max-width: 600px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* Featured Service - Large Card with Image */
+        .featured-service {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 80px;
+        }
+        .featured-service.reverse {
+            direction: rtl;
+        }
+        .featured-service.reverse > * {
+            direction: ltr;
+        }
+        .featured-image {
+            aspect-ratio: 4/3;
+            border-radius: 24px;
+            overflow: hidden;
+            background: var(--color-gray-100);
+        }
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .featured-content h3 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--color-gray-900);
+            margin-bottom: 1rem;
+        }
+        .featured-content p {
+            color: var(--color-gray-600);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            color: var(--color-gray-600);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .feature-list li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Service Grid - Minimal Cards */
+        .services-grid-minimal {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .service-card-minimal {
+            padding: 40px;
+            background: var(--color-white);
+            border-radius: 20px;
+            border: 1px solid var(--color-gray-100);
+            transition: all 0.3s ease;
+        }
+        .service-card-minimal:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 20px 40px -20px rgba(74, 124, 140, 0.2);
+            transform: translateY(-4px);
+        }
+        .service-card-minimal h4 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--color-gray-900);
+            margin-bottom: 0.75rem;
+        }
+        .service-card-minimal p {
+            color: var(--color-gray-500);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .service-meta-minimal {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--color-gray-400);
+        }
+
+        /* Treatment List - Simple */
+        .treatment-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 60px;
+        }
+        .treatment-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 24px;
+            background: var(--color-white);
+            border-radius: 12px;
+            border: 1px solid var(--color-gray-100);
+            transition: border-color 0.2s;
+        }
+        .treatment-item:hover {
+            border-color: var(--color-primary);
+        }
+        .treatment-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-gray-50);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .treatment-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-primary);
+        }
+        .treatment-item h5 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-gray-900);
+            margin-bottom: 0.25rem;
+        }
+        .treatment-item span {
+            font-size: 0.85rem;
+            color: var(--color-gray-500);
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 60px;
+        }
+        .image-grid-item {
+            aspect-ratio: 1;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--color-gray-100);
+        }
+        .image-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-grid-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* CTA Section */
+        .cta-minimal {
+            padding: var(--section-padding) 0;
+            text-align: center;
+            background: var(--color-gray-900);
+        }
+        .cta-minimal h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+        .cta-minimal p {
+            color: var(--color-gray-400);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+        .cta-minimal .btn-primary {
+            background: var(--color-white);
+            color: var(--color-gray-900);
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+        }
+        .cta-minimal .btn-primary:hover {
+            background: var(--color-gray-100);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .featured-service {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .featured-service.reverse {
+                direction: ltr;
+            }
+            .services-grid-minimal {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+            .section-title-large {
+                font-size: 2rem;
+            }
+            .services-grid-minimal {
+                grid-template-columns: 1fr;
+            }
+            .treatment-list {
+                grid-template-columns: 1fr;
+            }
+            .service-section {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body class="services-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Dr. Lusine Barseghyan</span>
+                <span class="logo-subtitle">Dermatologist & Cosmetologist</span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#appointment" class="nav-cta">Appointment</a></li>
+                </ul>
+            </nav>
+
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hy">ՀԱՅ</button>
+                <button class="lang-btn" data-lang="ru">РУС</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero -->
+        <section class="services-hero">
+            <div class="container">
+                <h1 data-i18n="spHeroTitle">Our Services</h1>
+                <p data-i18n="spHeroSubtitle">Medical expertise meets aesthetic excellence</p>
+            </div>
+        </section>
+
+        <!-- Medical Dermatology -->
+        <section class="service-section" id="medical">
+            <div class="container">
+                <span class="section-label" data-i18n="spMedicalLabel">Medical Dermatology</span>
+                <h2 class="section-title-large" data-i18n="spMedicalTitle">Skin health, diagnosed and treated</h2>
+                <p class="section-desc" data-i18n="spMedicalDesc">Evidence-based care for all skin conditions. From acne to chronic dermatitis, we provide thorough diagnosis and personalized treatment plans.</p>
+
+                <div class="featured-service">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="Dermatology consultation">
+                    </div>
+                    <div class="featured-content">
+                        <h3 data-i18n="spConsultTitle">Comprehensive Skin Consultation</h3>
+                        <p data-i18n="spConsultDesc">Thorough skin examinations and personalized treatment plans for all skin types and conditions. Expert diagnosis using advanced dermatological techniques.</p>
+                        <ul class="feature-list">
+                            <li data-i18n="spConsultF1">Complete skin health assessment</li>
+                            <li data-i18n="spConsultF2">Personalized treatment plans</li>
+                            <li data-i18n="spConsultF3">Ongoing condition monitoring</li>
+                            <li data-i18n="spConsultF4">Preventive care recommendations</li>
+                        </ul>
+                        <a href="index.html#appointment" class="btn btn-primary" data-i18n="spBookConsult">Book Consultation</a>
+                    </div>
+                </div>
+
+                <div class="services-grid-minimal">
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spAcneTitle">Acne Treatment</h4>
+                        <p data-i18n="spAcneDesc">Customized plans for all acne types and severities. We address the root cause, not just symptoms.</p>
+                        <div class="service-meta-minimal">
+                            <span data-i18n="spAcneTime">30 min initial</span>
+                            <span data-i18n="spAcneFor">All ages</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spEczemaTitle">Eczema & Dermatitis</h4>
+                        <p data-i18n="spEczemaDesc">Long-term management strategies for inflammatory skin conditions. Focus on comfort and control.</p>
+                        <div class="service-meta-minimal">
+                            <span>30 min</span>
+                            <span data-i18n="spEczemaFor">Ongoing care</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spPsoriasisTitle">Psoriasis</h4>
+                        <p data-i18n="spPsoriasisDesc">Modern treatment approaches including topical, systemic, and biologic options for lasting relief.</p>
+                        <div class="service-meta-minimal">
+                            <span>45 min</span>
+                            <span data-i18n="spPsoriasisFor">Regular monitoring</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spRosaceaTitle">Rosacea</h4>
+                        <p data-i18n="spRosaceaDesc">Targeted treatment for redness, flushing, and visible blood vessels with proven protocols.</p>
+                        <div class="service-meta-minimal">
+                            <span>30 min</span>
+                            <span data-i18n="spRosaceaFor">Personalized plan</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spFungalTitle">Fungal Infections</h4>
+                        <p data-i18n="spFungalDesc">Accurate diagnosis and effective treatment for skin and nail fungal conditions.</p>
+                        <div class="service-meta-minimal">
+                            <span>20 min</span>
+                            <span data-i18n="spFungalFor">Quick results</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spHairTitle">Hair & Scalp</h4>
+                        <p data-i18n="spHairDesc">Evaluation and treatment of hair loss, dandruff, and scalp conditions.</p>
+                        <div class="service-meta-minimal">
+                            <span>30 min</span>
+                            <span data-i18n="spHairFor">Comprehensive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Injectables -->
+        <section class="service-section" id="injectables">
+            <div class="container">
+                <span class="section-label" data-i18n="spInjectLabel">Injectable Treatments</span>
+                <h2 class="section-title-large" data-i18n="spInjectTitle">Subtle enhancements, natural results</h2>
+                <p class="section-desc" data-i18n="spInjectDesc">Physician-administered injectables for rejuvenation without surgery. Precision technique for results that look like you, just refreshed.</p>
+
+                <div class="featured-service reverse">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80" alt="Injectable treatment">
+                    </div>
+                    <div class="featured-content">
+                        <h3 data-i18n="spBotoxTitle">Botox & Dysport</h3>
+                        <p data-i18n="spBotoxDesc">Precise neuromodulator injections to smooth dynamic wrinkles while maintaining natural facial expression. Results in 3-5 days, lasting 3-4 months.</p>
+                        <ul class="feature-list">
+                            <li data-i18n="spBotoxF1">Forehead lines & frown lines</li>
+                            <li data-i18n="spBotoxF2">Crow's feet</li>
+                            <li data-i18n="spBotoxF3">Brow lift</li>
+                            <li data-i18n="spBotoxF4">Excessive sweating treatment</li>
+                        </ul>
+                        <a href="index.html#appointment" class="btn btn-primary" data-i18n="spBookConsult">Book Consultation</a>
+                    </div>
+                </div>
+
+                <div class="treatment-list">
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 8v8M8 12h8"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spFillersTitle">Dermal Fillers</h5>
+                            <span data-i18n="spFillersDesc">Lips, cheeks, jawline contouring</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spMesoTitle">Mesotherapy</h5>
+                            <span data-i18n="spMesoDesc">Vitamin cocktails for glow</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 000-7.78z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spPrpTitle">PRP Therapy</h5>
+                            <span data-i18n="spPrpDesc">Natural rejuvenation with your own plasma</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spProfhiloTitle">Profhilo</h5>
+                            <span data-i18n="spProfhiloDesc">Bio-remodeling for skin laxity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facial Treatments -->
+        <section class="service-section" id="facials">
+            <div class="container">
+                <span class="section-label" data-i18n="spFacialLabel">Facial Treatments</span>
+                <h2 class="section-title-large" data-i18n="spFacialTitle">Professional-grade skin care</h2>
+                <p class="section-desc" data-i18n="spFacialDesc">Clinical facials and advanced treatments that go beyond what's possible at home. Real results, visible improvement.</p>
+
+                <div class="image-grid">
+                    <div class="image-grid-item">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="HydraFacial treatment">
+                    </div>
+                    <div class="image-grid-item">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Chemical peel">
+                    </div>
+                    <div class="image-grid-item">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" alt="Skin treatment">
+                    </div>
+                    <div class="image-grid-item">
+                        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80" alt="LED therapy">
+                    </div>
+                    <div class="image-grid-item">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Facial treatment">
+                    </div>
+                </div>
+
+                <div class="services-grid-minimal" style="margin-top: 60px;">
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spHydraTitle">HydraFacial</h4>
+                        <p data-i18n="spHydraDesc">Deep cleanse, extract, and hydrate in one session. Immediate glow with zero downtime.</p>
+                        <div class="service-meta-minimal">
+                            <span>45-60 min</span>
+                            <span data-i18n="spNoDowntime">No downtime</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spPeelsTitle">Chemical Peels</h4>
+                        <p data-i18n="spPeelsDesc">Medical-grade peels for texture, tone, and clarity. Customized depth for your goals.</p>
+                        <div class="service-meta-minimal">
+                            <span>30-45 min</span>
+                            <span data-i18n="spPeelsRecovery">3-7 day recovery</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spMicroTitle">Microneedling</h4>
+                        <p data-i18n="spMicroDesc">Collagen induction therapy for scars, wrinkles, and overall texture improvement.</p>
+                        <div class="service-meta-minimal">
+                            <span>45 min</span>
+                            <span data-i18n="spMicroRecovery">2-3 day recovery</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spLedTitle">LED Light Therapy</h4>
+                        <p data-i18n="spLedDesc">Non-invasive treatment using specific wavelengths for acne, healing, and anti-aging.</p>
+                        <div class="service-meta-minimal">
+                            <span>20-30 min</span>
+                            <span data-i18n="spNoDowntime">No downtime</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spDermaTitle">Dermaplaning</h4>
+                        <p data-i18n="spDermaDesc">Gentle exfoliation removing dead skin and peach fuzz for smoother makeup application.</p>
+                        <div class="service-meta-minimal">
+                            <span>30 min</span>
+                            <span data-i18n="spInstantResults">Instant results</span>
+                        </div>
+                    </div>
+                    <div class="service-card-minimal">
+                        <h4 data-i18n="spOxygenTitle">Oxygen Facial</h4>
+                        <p data-i18n="spOxygenDesc">Pressurized oxygen infuses serums deep into skin for instant plumping and radiance.</p>
+                        <div class="service-meta-minimal">
+                            <span>45 min</span>
+                            <span data-i18n="spEventReady">Event-ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skin Concerns -->
+        <section class="service-section" id="concerns">
+            <div class="container">
+                <span class="section-label" data-i18n="spConcernsLabel">Cosmetic Concerns</span>
+                <h2 class="section-title-large" data-i18n="spConcernsTitle">Targeted solutions</h2>
+                <p class="section-desc" data-i18n="spConcernsDesc">Whatever your skin concern, we have proven treatments. Medical expertise applied to aesthetic goals.</p>
+
+                <div class="featured-service">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80" alt="Skin consultation">
+                    </div>
+                    <div class="featured-content">
+                        <h3 data-i18n="spPigmentTitle">Hyperpigmentation & Melasma</h3>
+                        <p data-i18n="spPigmentDesc">Stubborn dark spots and uneven tone require a multi-modal approach. We combine prescription treatments, professional procedures, and smart skincare.</p>
+                        <ul class="feature-list">
+                            <li data-i18n="spPigmentF1">Medical-grade lightening agents</li>
+                            <li data-i18n="spPigmentF2">Chemical peels & laser referral</li>
+                            <li data-i18n="spPigmentF3">Sun protection protocols</li>
+                            <li data-i18n="spPigmentF4">Maintenance programs</li>
+                        </ul>
+                        <a href="index.html#appointment" class="btn btn-primary" data-i18n="spStartTreatment">Start Treatment</a>
+                    </div>
+                </div>
+
+                <div class="treatment-list">
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spAcneScarTitle">Acne Scarring</h5>
+                            <span data-i18n="spAcneScarDesc">Microneedling, peels, fillers</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spWrinklesTitle">Fine Lines & Wrinkles</h5>
+                            <span data-i18n="spWrinklesDesc">Botox, retinoids, skin boosters</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spDullTitle">Dull, Tired Skin</h5>
+                            <span data-i18n="spDullDesc">HydraFacial, vitamin infusions</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spPoresTitle">Large Pores</h5>
+                            <span data-i18n="spPoresDesc">Peels, microneedling, retinoids</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spLaxityTitle">Skin Laxity</h5>
+                            <span data-i18n="spLaxityDesc">Profhilo, radiofrequency</span>
+                        </div>
+                    </div>
+                    <div class="treatment-item">
+                        <div class="treatment-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v2M12 21v2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 data-i18n="spUnderEyeTitle">Under-Eye Concerns</h5>
+                            <span data-i18n="spUnderEyeDesc">Fillers, PRP, skincare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-minimal">
+            <div class="container">
+                <h2 data-i18n="spCtaTitle">Ready to get started?</h2>
+                <p data-i18n="spCtaDesc">Book a consultation to discuss your goals and create a personalized plan.</p>
+                <a href="index.html#appointment" class="btn btn-primary" data-i18n="spCtaBtn">Book Appointment</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Dr. Lusine Barseghyan</span>
+                    <p class="footer-tagline">Dermatologist & Cosmetologist in Yerevan</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>Erebuni Plaza, Office 26</strong></p>
+                    <p>4 Vazgen Sargsyan Street, Yerevan</p>
+                    <p><a href="tel:+37410510451">+374 10 510451</a></p>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p class="copyright">&copy; 2026 Dr. Lusine Barseghyan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

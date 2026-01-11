@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educational dermatology article by Dr. Lusine Barseghyan, dermatologist in Yerevan, Armenia. Expert advice on skin health and care.">
+    <title id="page-title">Blog Article | Dr. Lusine Barseghyan - Dermatologist in Yerevan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-hero { padding: calc(80px + var(--space-12)) 0 var(--space-12); background: var(--color-gray-50); }
+        .article-meta { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-4); font-size: var(--font-size-sm); color: var(--color-gray-500); }
+        .article-title { font-size: var(--font-size-4xl); font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-6); line-height: var(--line-height-tight); }
+        .article-content { padding: var(--space-12) 0; }
+        .article-body { max-width: 720px; margin: 0 auto; }
+        .article-body h2 { font-size: var(--font-size-2xl); font-weight: 600; color: var(--color-gray-900); margin: var(--space-10) 0 var(--space-4); }
+        .article-body h3 { font-size: var(--font-size-xl); font-weight: 600; color: var(--color-gray-800); margin: var(--space-8) 0 var(--space-3); }
+        .article-body p { color: var(--color-gray-600); line-height: var(--line-height-relaxed); margin-bottom: var(--space-5); }
+        .article-body ul, .article-body ol { margin: var(--space-4) 0; padding-left: var(--space-6); }
+        .article-body li { color: var(--color-gray-600); margin-bottom: var(--space-2); line-height: var(--line-height-relaxed); }
+        .article-disclaimer { background: var(--color-gray-50); border-left: 4px solid var(--color-primary); padding: var(--space-4); margin: var(--space-8) 0; border-radius: var(--radius-md); }
+        .article-disclaimer p { color: var(--color-gray-600); font-size: var(--font-size-sm); margin: 0; }
+        .article-author { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-6); background: var(--color-gray-50); border-radius: var(--radius-lg); margin-top: var(--space-10); }
+        .author-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--color-gray-200); }
+        .author-info h4 { font-size: var(--font-size-lg); font-weight: 600; color: var(--color-gray-900); margin-bottom: var(--space-1); }
+        .author-info p { color: var(--color-gray-500); font-size: var(--font-size-sm); margin: 0; }
+        .back-link { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-primary); margin-bottom: var(--space-6); }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Dr. Lusine Barseghyan</span>
+                <span class="logo-subtitle" data-i18n="logoSubtitle">Dermatologist</span>
+            </a>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="index.html#hero" data-i18n="navHome">Home</a></li>
+                    <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
+                    <li><a href="index.html#services" data-i18n="navServices">Services</a></li>
+                    <li><a href="blog.html" data-i18n="navBlog">Blog</a></li>
+                    <li><a href="index.html#appointment" data-i18n="navAppointment">Appointment</a></li>
+                    <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hy">ՀԱՅ</button>
+                <button class="lang-btn" data-lang="ru">РУС</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <article>
+            <header class="article-hero">
+                <div class="container">
+                    <a href="blog.html" class="back-link">&larr; <span data-i18n="backToBlog">Back to Blog</span></a>
+                    <div class="article-meta">
+                        <span id="article-date"></span>
+                        <span>|</span>
+                        <span id="article-category"></span>
+                    </div>
+                    <h1 class="article-title" id="article-title"></h1>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="container">
+                    <div class="article-body" id="article-body">
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Dr. Lusine Barseghyan</span>
+                    <p class="footer-tagline">Professional Dermatological Care</p>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-legal">
+                <p class="copyright">&copy; 2026 Dr. Lusine Barseghyan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="blog-articles.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Load article based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = parseInt(urlParams.get('id')) || 1;
+
+            // Small delay to ensure language is set first
+            setTimeout(() => loadArticle(articleId), 50);
+        });
+
+        function loadArticle(id) {
+            const lang = localStorage.getItem('preferredLanguage') || 'en';
+            const articles = window.blogArticles[lang] || window.blogArticles.en;
+            const article = articles[id] || articles[1];
+
+            document.getElementById('article-date').textContent = article.date;
+            document.getElementById('article-category').textContent = article.category;
+            document.getElementById('article-title').textContent = article.title;
+            document.getElementById('article-body').innerHTML = article.content;
+            document.getElementById('page-title').textContent = article.title + ' | Dr. Lusine Barseghyan';
+        }
+
+        // Re-load article when language changes
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                localStorage.setItem('preferredLanguage', lang);
+                setTimeout(() => {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const articleId = parseInt(urlParams.get('id')) || 1;
+                    loadArticle(articleId);
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
