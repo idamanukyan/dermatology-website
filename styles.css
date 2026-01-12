@@ -1347,3 +1347,360 @@ input, textarea, select {
 .modal-close {
     min-width: 120px;
 }
+
+/* ============================================
+   ENHANCED MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Extra small devices (phones, less than 480px) */
+@media (max-width: 479px) {
+    :root {
+        --container-padding: 1rem;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: var(--space-10) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-8);
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    /* Header mobile adjustments */
+    .header {
+        padding: var(--space-3) 0;
+    }
+
+    .logo-text {
+        font-size: var(--font-size-base);
+    }
+
+    .logo-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .language-switcher {
+        gap: 2px;
+        padding: 2px;
+    }
+
+    .lang-btn {
+        padding: var(--space-1) var(--space-2);
+        font-size: var(--font-size-xs);
+    }
+
+    /* Hero mobile */
+    .hero {
+        padding-top: calc(70px + var(--space-10));
+        padding-bottom: var(--space-10);
+        min-height: auto;
+    }
+
+    .hero .container {
+        gap: var(--space-8);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .hero-tagline {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--space-6);
+    }
+
+    .hero-cta {
+        gap: var(--space-3);
+    }
+
+    .hero-image-placeholder {
+        max-width: 200px;
+    }
+
+    /* Services mobile */
+    .service-card {
+        padding: var(--space-5);
+    }
+
+    .service-title {
+        font-size: var(--font-size-lg);
+    }
+
+    /* Blog mobile */
+    .blog-content {
+        padding: var(--space-4);
+    }
+
+    .blog-card .blog-title {
+        font-size: var(--font-size-base);
+    }
+
+    /* Appointment mobile */
+    .appointment-form {
+        padding: var(--space-5);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: var(--space-3);
+    }
+
+    /* Contact mobile */
+    .contact-card {
+        padding: var(--space-4);
+    }
+
+    /* Footer mobile */
+    .footer {
+        padding: var(--space-8) 0 var(--space-6);
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .legal-links {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--space-3) var(--space-4);
+        font-size: var(--font-size-sm);
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+}
+
+/* Small devices (landscape phones, 480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-image-placeholder {
+        max-width: 250px;
+    }
+
+    .service-card {
+        padding: var(--space-6);
+    }
+
+    .appointment-form {
+        padding: var(--space-6);
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger tap targets for touch devices */
+    .btn {
+        min-height: 48px;
+    }
+
+    .nav-menu a {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    .lang-btn {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        min-height: 48px;
+    }
+
+    /* Remove hover effects that don't work well on touch */
+    .service-card:hover {
+        transform: none;
+    }
+
+    .blog-card:hover {
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding-top: calc(60px + var(--space-8));
+        padding-bottom: var(--space-8);
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6);
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-cta {
+        justify-content: flex-start;
+    }
+
+    .hero-tagline {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-image-placeholder {
+        max-width: 200px;
+    }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Better text wrapping on mobile */
+@media (max-width: 767px) {
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .about-text p,
+    .service-desc,
+    .blog-excerpt,
+    .appointment-notice p,
+    .emergency-notice p {
+        text-align: left;
+    }
+
+    /* Full-width images on mobile */
+    .about-image-placeholder,
+    .hero-image-placeholder {
+        margin: 0 auto;
+    }
+
+    /* Stack form elements */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Better modal on mobile */
+    .modal-content {
+        padding: var(--space-6);
+        margin: var(--space-4);
+        max-width: calc(100% - var(--space-8));
+    }
+
+    /* Mobile navigation improvements */
+    .nav-menu {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    .nav-menu a {
+        padding: var(--space-4) var(--space-5);
+        border-bottom: 1px solid var(--color-gray-100);
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .mobile-menu-toggle,
+    .language-switcher,
+    .hero-cta,
+    .appointment-form,
+    .footer {
+        display: none;
+    }
+
+    .section {
+        padding: var(--space-8) 0;
+        page-break-inside: avoid;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #00566e;
+        --color-gray-500: #333;
+        --color-gray-600: #222;
+    }
+
+    .btn-primary {
+        border-width: 3px;
+    }
+
+    .btn-secondary {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Safe area insets for notched phones */
+@supports (padding: max(0px)) {
+    .header {
+        padding-left: max(var(--container-padding), env(safe-area-inset-left));
+        padding-right: max(var(--container-padding), env(safe-area-inset-right));
+    }
+
+    .footer {
+        padding-bottom: max(var(--space-8), env(safe-area-inset-bottom));
+    }
+
+    .container {
+        padding-left: max(var(--container-padding), env(safe-area-inset-left));
+        padding-right: max(var(--container-padding), env(safe-area-inset-right));
+    }
+}
